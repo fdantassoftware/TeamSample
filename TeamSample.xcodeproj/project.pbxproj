@@ -13,11 +13,10 @@
 		9A794B3E1F29359F0087BCE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A794B3C1F29359F0087BCE4 /* Main.storyboard */; };
 		9A794B401F29359F0087BCE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A794B3F1F29359F0087BCE4 /* Assets.xcassets */; };
 		9A794B431F29359F0087BCE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A794B411F29359F0087BCE4 /* LaunchScreen.storyboard */; };
-		9A794B4D1F293DD70087BCE4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B4C1F293DD70087BCE4 /* MyCell.swift */; };
+		9A794B4D1F293DD70087BCE4 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B4C1F293DD70087BCE4 /* ProjectCell.swift */; };
 		9A794B521F2B4C4E0087BCE4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B511F2B4C4E0087BCE4 /* Project.swift */; };
 		9A794B541F2B4DA50087BCE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B531F2B4DA50087BCE4 /* User.swift */; };
 		9A794B561F2B4E760087BCE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B551F2B4E760087BCE4 /* Constants.swift */; };
-		9A794B581F2B50510087BCE4 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B571F2B50510087BCE4 /* KeychainHelper.swift */; };
 		9A794B5A1F2B76B00087BCE4 /* AASquaresLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A794B591F2B76B00087BCE4 /* AASquaresLoading.swift */; };
 		C339ACE21F2E186200D7029D /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339ACE11F2E186200D7029D /* People.swift */; };
 		C339ACE41F2E265E00D7029D /* Acitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339ACE31F2E265E00D7029D /* Acitivity.swift */; };
@@ -36,11 +35,10 @@
 		9A794B3F1F29359F0087BCE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A794B421F29359F0087BCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A794B441F29359F0087BCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A794B4C1F293DD70087BCE4 /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		9A794B4C1F293DD70087BCE4 /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		9A794B511F2B4C4E0087BCE4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		9A794B531F2B4DA50087BCE4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A794B551F2B4E760087BCE4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9A794B571F2B50510087BCE4 /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9A794B591F2B76B00087BCE4 /* AASquaresLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AASquaresLoading.swift; sourceTree = "<group>"; };
 		C339ACE11F2E186200D7029D /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		C339ACE31F2E265E00D7029D /* Acitivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acitivity.swift; sourceTree = "<group>"; };
@@ -94,17 +92,12 @@
 		9A794B371F29359F0087BCE4 /* TeamSample */ = {
 			isa = PBXGroup;
 			children = (
-				9A794B591F2B76B00087BCE4 /* AASquaresLoading.swift */,
+				C339ACE51F2E35D700D7029D /* Resources */,
 				9A794B501F2B4C2F0087BCE4 /* Views */,
 				9A794B4F1F2B4C210087BCE4 /* Controllers */,
 				9A794B4E1F2B4C140087BCE4 /* Model */,
 				9A794B381F29359F0087BCE4 /* AppDelegate.swift */,
-				9A794B3C1F29359F0087BCE4 /* Main.storyboard */,
-				9A794B3F1F29359F0087BCE4 /* Assets.xcassets */,
-				9A794B411F29359F0087BCE4 /* LaunchScreen.storyboard */,
 				9A794B441F29359F0087BCE4 /* Info.plist */,
-				9A794B551F2B4E760087BCE4 /* Constants.swift */,
-				9A794B571F2B50510087BCE4 /* KeychainHelper.swift */,
 			);
 			path = TeamSample;
 			sourceTree = "<group>";
@@ -132,7 +125,9 @@
 		9A794B501F2B4C2F0087BCE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9A794B4C1F293DD70087BCE4 /* MyCell.swift */,
+				9A794B411F29359F0087BCE4 /* LaunchScreen.storyboard */,
+				9A794B3C1F29359F0087BCE4 /* Main.storyboard */,
+				9A794B4C1F293DD70087BCE4 /* ProjectCell.swift */,
 				C3CFB8EF1F2D70F100B1E231 /* PeopleCell.swift */,
 				C3CFB8F11F2D748900B1E231 /* AcitivityCell.swift */,
 				C3CFB8F31F2D786400B1E231 /* MessagesCell.swift */,
@@ -146,6 +141,16 @@
 				E67AC866F37C1D93CC20DC8C /* Pods_TeamSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C339ACE51F2E35D700D7029D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A794B3F1F29359F0087BCE4 /* Assets.xcassets */,
+				9A794B591F2B76B00087BCE4 /* AASquaresLoading.swift */,
+				9A794B551F2B4E760087BCE4 /* Constants.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,13 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A794B4D1F293DD70087BCE4 /* MyCell.swift in Sources */,
+				9A794B4D1F293DD70087BCE4 /* ProjectCell.swift in Sources */,
 				C3CFB8F41F2D786400B1E231 /* MessagesCell.swift in Sources */,
 				9A794B3B1F29359F0087BCE4 /* MainVC.swift in Sources */,
 				C3CFB8F01F2D70F100B1E231 /* PeopleCell.swift in Sources */,
 				9A794B391F29359F0087BCE4 /* AppDelegate.swift in Sources */,
 				9A794B541F2B4DA50087BCE4 /* User.swift in Sources */,
-				9A794B581F2B50510087BCE4 /* KeychainHelper.swift in Sources */,
 				9A794B5A1F2B76B00087BCE4 /* AASquaresLoading.swift in Sources */,
 				9A794B521F2B4C4E0087BCE4 /* Project.swift in Sources */,
 				C339ACE41F2E265E00D7029D /* Acitivity.swift in Sources */,

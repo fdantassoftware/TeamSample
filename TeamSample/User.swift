@@ -37,6 +37,7 @@ class User {
             case .success:
                 if let dic = result.value as? Dictionary<String, AnyObject> {
                     if let account = dic["account"] as? Dictionary<String, AnyObject> {
+                         // Get image from Url asyn
                         if let imageUrl = account["logo"] as? String {
                             self.sessionManager.request(imageUrl).responseData(completionHandler: { (data) in
                                 if let image = data.value {
@@ -101,6 +102,7 @@ class User {
                                 }
                                 
                             }
+                             // Get image from Url asyn
                             if let imageUrl = project["logo"] as? String {
                                 self.sessionManager.request(imageUrl).responseData(completionHandler: { (data) in
                                     if let image = data.value {

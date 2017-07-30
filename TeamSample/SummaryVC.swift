@@ -11,20 +11,19 @@ import UIKit
 class SummaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     let sectionTitles: [String] = ["People", "Acitivities"]
-    let s1Data: [String] = ["Row 1", "Row 2", "Row 3"]
-    let s2Data: [String] = ["Row 1", "Row 2", "Row 3"]
-    let s3Data: [String] = ["Row 1", "Row 2", "Row 3", "Row 4"]
     let sectionImages: [UIImage] = [#imageLiteral(resourceName: "people"), #imageLiteral(resourceName: "activity")]
     var project: Project!
-    
     var sectionData: [Int: [AnyObject]] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Reset array of objects
         project.activities.removeAll()
         project.people.removeAll()
+        // Delegates
         tableView.delegate = self
         tableView.dataSource = self
+        //Mark: Call api and update table
         project.getPeople(view: self.view, controller: self) {
             self.tableView.reloadData()
         }
@@ -49,7 +48,7 @@ class SummaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-//        view.backgroundColor = UIColor(red: 59/255, green: 147/255, blue: 247/255, alpha: 0.15)
+        // Create custom view with image and label and add to table header
         view.backgroundColor = UIColor.white
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(red: 59/255, green: 147/255, blue: 247/255, alpha: 1).cgColor

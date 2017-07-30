@@ -8,11 +8,10 @@
 
 import UIKit
 
-class MyCell: UICollectionViewCell {
+class ProjectCell: UICollectionViewCell {
     // Custom CollectionView Cell
     @IBOutlet weak var projectName: UILabel!
     @IBOutlet weak var projectImage: UIImageView!
     @IBOutlet weak var projectCompany: UILabel!
-    
     @IBOutlet weak var projectDate: UILabel!
 }

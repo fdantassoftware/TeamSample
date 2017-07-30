@@ -26,6 +26,7 @@ class Project {
     return SessionManager(configuration: configuration)
     }()
     
+    // Get Acitivites given an project Id
     func getActivities(view: UIView, controller: UIViewController, completed: @escaping DownloadComplete) {
          view.squareLoading.start(0.0)
         let headers = getCredencials()
@@ -38,12 +39,34 @@ class Project {
                         print(activityArray)
                         for activity in activityArray {
                             let newActivity = Activity()
-                            if let description = activity["description"] as? String, let user = activity["fromusername"] as? String, let date = activity["datetime"] as? String {
-                               newActivity.description = description
-                                newActivity.forusername = user
+                            if let description = activity["description"] as? String, let user = activity["fromusername"] as? String, let date = activity["datetime"] as? String, let activityType = activity["activitytype"] as? String {
+                                // format date string
+                                let dateformatter = DateFormatter()
+                                dateformatter.locale = Locale(identifier: "en_US_POSIX")
+                                dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                                let string = dateformatter.date(from: date)
+                                let dateformatterFinal = DateFormatter()
+                                dateformatterFinal.dateFormat = "HH:mm"
+                                if string != nil {
+                                    let finalDate = dateformatterFinal.string(from: string!)
+                                    if finalDate != "" {
+                                        newActivity.description = description
+                                        // Add text  to label according to type
+                                        if activityType == "new" {
+                                            newActivity.forusername = "Added by " + user + " " + finalDate
+                                        } else if activityType == "edited" {
+                                            newActivity.forusername = "Edited by " + user + " " + finalDate
+                                        } else {
+                                            newActivity.forusername = user + " " + finalDate
+                                        }
+
+
+                                    }
+                                }
                                 
                                 
                             }
+                            // Get image from Url asyn
                             if let imageUrl = activity["from-user-avatar-url"] as? String {
                                 self.sessionManager.request(imageUrl).responseData(completionHandler: { (data) in
                                     if let image = data.value {
@@ -78,6 +101,7 @@ class Project {
         }
     }
     
+    // Get people given an project Id
     func getPeople(view: UIView, controller: UIViewController, completed: @escaping DownloadComplete) {
          view.squareLoading.start(0.0)
          let headers = getCredencials()
@@ -93,6 +117,7 @@ class Project {
                             if let firstName = people["first-name"] as? String, let lastName = people["last-name"] as? String {
                                 newPeople.name = firstName + " " + lastName
                             }
+                             // Get image from Url asyn
                             if let imageUrl = people["avatar-url"] as? String {
                                 self.sessionManager.request(imageUrl).responseData(completionHandler: { (data) in
                                     if let image = data.value {
